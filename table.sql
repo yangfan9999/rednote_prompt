@@ -1,0 +1,29 @@
+CREATE TABLE reddit_posts (
+
+id INT AUTO_INCREMENT PRIMARY KEY,
+
+reddit_id VARCHAR(50) UNIQUE,
+
+subreddit VARCHAR(100),
+
+title TEXT,
+
+content MEDIUMTEXT,
+
+author VARCHAR(100),
+
+upvotes INT DEFAULT 0,
+
+comments INT DEFAULT 0,
+
+post_url VARCHAR(500),
+
+created_utc BIGINT,
+
+hot_score DECIMAL(10,2) DEFAULT 0,
+
+status TINYINT DEFAULT 0,
+
+create_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
